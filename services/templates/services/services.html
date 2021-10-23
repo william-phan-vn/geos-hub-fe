@@ -1,0 +1,18 @@
+{% extends 'services/base.html'%}
+
+{% block content %}
+
+<div class="container text-center">
+
+    {% for service in services %}
+
+    <h4>{{ service.name }} - {{ service.price }}$ - {{ service.os_platform }}</h4>
+    <p>{{ service.description }}</p>
+
+    {% endfor %}
+
+    <a href="{% url 'home' %}" class="btn btn-primary">Find Services</a>
+    <a href="{% url 'order_service' %}" class="btn btn-warning">Order Now!</a>
+</div>
+
+{% endblock %}

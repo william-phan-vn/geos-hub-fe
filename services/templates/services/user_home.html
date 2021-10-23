@@ -1,0 +1,12 @@
+{% extends "services/base.html" %}
+
+{% block content %}
+
+<h3 class="row justify-content-center mb-3">You have paid {{ services|length }} service{{ services|length|pluralize }}</h3>
+
+{% for service in services %}
+    <h4>{{ service.name }} - {{ service.price }}$ - {{ service.os_platform }}</h4>
+    <p>{{ service.description }}</p>
+{% endfor %}
+
+{% endblock %}
