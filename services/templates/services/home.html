@@ -7,7 +7,7 @@
 
     <form action="services">
         Search by
-            <select name="search">
+            <select name="search_by">
                 <option value="price">Price</option>
                 <option value="os_platform">OS Platform</option>
                 <option value="description">Description</option>
@@ -17,11 +17,14 @@
 
         <br>
         Sort by:
-            <select name="sort">
+            <select name="sort_by">
                 <option value="price">Price</option>
                 <option value="os_platform">OS Platform</option>
                 <option value="name" selected="selected">Name</option>
             </select>
+
+        <br>
+        Get the first <input name="page_size" value="25"> services
 
         <br>
         <input type="submit", value="Get services" class="btn btn-primary">

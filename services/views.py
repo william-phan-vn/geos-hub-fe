@@ -11,7 +11,7 @@ def home(request):
 def all_services(request):
     service_path = request.get_full_path()
     response = requests.get(f'http://localhost:8001{service_path}')
-    context = {'services': json.loads(response.content.decode('utf-8'))}
+    context = json.loads(response.content.decode('utf-8'))
     return render(request, 'services/services.html', context)
 
 
